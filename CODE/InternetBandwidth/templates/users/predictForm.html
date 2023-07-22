@@ -1,0 +1,19 @@
+{%extends 'users/user_base.html'%}
+
+{% block content %}
+<br><br><br>
+<center>
+    <h2>Test Input LAC Predictions</h2>
+    {{msg}}
+    <form action="{%url 'usrPredictForm'%}" method="post">
+         {%csrf_token%}
+        select LAC: <select name="laccode" id="" required>
+        <option value="">---Select Area Location Code---</option>
+        {%for l in lac%}
+        <option value="{{l}}">{{l}}</option>
+        {%endfor%}
+    </select><br><br>
+         <button type="submit" class="btn btn-dark mb-2">Predict</button>
+    </form>
+</center>
+{% endblock %}

@@ -1,0 +1,74 @@
+{%extends 'users/user_base.html'%}
+
+{% block content %}
+<style>
+    html,
+    body,
+    .intro {
+        height: 100%;
+    }
+
+    .gradient-custom-2 {
+        /* fallback for old browsers */
+        background: #6a11cb;
+
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to top, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1));
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to top, rgba(106, 17, 203, 1), rgba(37, 117, 252, 1))
+    }
+
+    table td,
+    table th {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    thead th,
+    tbody th {
+        color: #fff;
+    }
+
+    tbody td {
+        font-weight: 500;
+        color: rgba(255, 255, 255, .65);
+    }
+
+    table, th, td {
+        width: 75%;
+        border: 1px solid black;
+        border-collapse: collapse;
+        padding: 10px 10px;
+        margin: 10px 10px;
+        text-align: center;
+    }
+</style>
+<h2>View Dataset</h2>
+
+<div align="center"><br><br>
+    <section class="intro">
+        <div class="gradient-custom-2 h-80">
+            <div class="mask d-flex align-items-center h-80">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-12">
+                            <div class="table-responsive">
+                                <h2>View Inernet Consume in Pune </h2>
+                                {{data|safe}}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock %}
+
+
+
+

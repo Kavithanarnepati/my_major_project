@@ -1,0 +1,84 @@
+
+{% extends 'base.html' %}
+{% block content %}
+<style>
+     .mar{
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 100px;
+          color: black;
+          font-weight: 1000px;
+          font-size: 23px;
+          
+     }
+     #id_name{
+          border-radius: 10px;
+          align-self: center;
+          margin-left: 10px;
+       
+     }
+     #id_loginid{
+          border-radius: 10px;
+          align-self: center;
+          margin-left: 8px;
+       
+     }
+     #id_password{
+          border-radius: 10px;
+          margin-left: 5px;
+       
+     }
+     #id_mobile{
+          border-radius: 10px;
+          margin-left: 10px;
+       
+     }
+   
+       
+     
+     #id_email{
+          border-radius: 10px;
+          margin-left: 10px;
+          color: whitesmoke;
+       
+     }
+     #id_locality{
+          border-radius: 10px;
+          margin-left: 10px;
+       
+     }
+     #id_address{
+          border-radius: 20px;
+          height: 30px;
+          margin-left: 10px;
+         
+       
+     }
+     #id_city{
+          border-radius: 10px;
+          margin-left: 10px;
+       
+     }
+     #id_state{
+          border-radius: 10px;
+          margin-left: 10px;
+       
+     }
+     label{
+          color: hwb(160 9% 90%);
+     }
+</style>
+
+     <form  method="post" class="mar">
+          <h1>create account</h1>
+          {% csrf_token %}
+          {{form.as_p}}
+          <button type="submit">register</button>
+          </form>
+
+          
+</html>
+{% endblock %}
+
